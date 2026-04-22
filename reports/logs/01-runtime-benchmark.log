@@ -1,0 +1,93 @@
+repo=bench-runtime-shootout
+scenario=Runtime Benchmark
+captured_at=2026-04-22T06:14:20.339Z
+browser=Chromium 147.0.7727.15
+headless=true
+meta_scenario=runtime-benchmark-ort-webgpu-style
+status=success
+
+[page-console]
+(none)
+
+[harness-logs]
+./reports/logs/01-runtime-benchmark.log
+
+[result-json]
+{
+  "meta": {
+    "repo": "bench-runtime-shootout",
+    "commit": "b9359b1",
+    "timestamp": "2026-04-22T06:14:20.229Z",
+    "owner": "ai-webgpu-lab",
+    "track": "benchmark",
+    "scenario": "runtime-benchmark-ort-webgpu-style",
+    "notes": "ort-webgpu-style:ttft=20.1,decode=146.98,turn=460.8; webllm-style:ttft=22.2,decode=133.9,turn=522.1; transformersjs-style:ttft=17.2,decode=115.04,turn=552.7; automation=playwright-chromium",
+    "capture_context": {
+      "tool": "playwright-chromium",
+      "browser_name": "Chromium",
+      "browser_version": "147.0.7727.15",
+      "headless": true,
+      "captured_at": "2026-04-22T06:14:20.339Z",
+      "captured_by": "zzragida"
+    }
+  },
+  "environment": {
+    "browser": {
+      "name": "Chrome",
+      "version": "147.0.7727.15"
+    },
+    "os": {
+      "name": "Linux",
+      "version": "unknown"
+    },
+    "device": {
+      "name": "Linux x86_64",
+      "class": "desktop-high",
+      "cpu": "16 threads",
+      "memory_gb": 16,
+      "power_mode": "unknown"
+    },
+    "gpu": {
+      "adapter": "profile-driven",
+      "required_features": [],
+      "limits": {}
+    },
+    "backend": "mixed",
+    "fallback_triggered": false,
+    "worker_mode": "mixed",
+    "cache_state": "warm"
+  },
+  "workload": {
+    "kind": "llm-chat",
+    "name": "fixed-runtime-shootout",
+    "input_profile": "prompt-17-output-54",
+    "model_id": "ort-webgpu-style",
+    "context_tokens": 17,
+    "output_tokens": 54
+  },
+  "metrics": {
+    "common": {
+      "time_to_interactive_ms": 1627.4,
+      "init_ms": 72.6,
+      "success_rate": 1,
+      "peak_memory_note": "16 GB reported by browser",
+      "error_type": ""
+    },
+    "llm": {
+      "ttft_ms": 20.1,
+      "prefill_tok_per_sec": 817.31,
+      "decode_tok_per_sec": 146.98,
+      "turn_latency_ms": 460.8
+    }
+  },
+  "status": "success",
+  "artifacts": {
+    "raw_logs": [
+      "./reports/logs/01-runtime-benchmark.log"
+    ],
+    "deploy_url": "https://ai-webgpu-lab.github.io/bench-runtime-shootout/",
+    "screenshots": [
+      "./reports/screenshots/01-runtime-benchmark.png"
+    ]
+  }
+}
